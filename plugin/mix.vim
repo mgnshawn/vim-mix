@@ -34,6 +34,12 @@ endfunction
 
 command! Mcompile call s:Mcompile()
 
+function! s:Mbuild()
+  call s:Mix('escript.build')
+endfunction
+
+command! Mbuild call s:Mbuild()
+
 function! s:Mdeps(...)
   if a:0 == 0
     call s:Mix('deps')
